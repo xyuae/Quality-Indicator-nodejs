@@ -1,0 +1,8 @@
+Let's render some HTML with pure JavaScript. React takes the approach of generating HTML with JavaScript. It does that for many reasons. The most important ones are that we get the full power of JavaScript to work with our data, and before we generate the HTML, we can represent it as a javaScript object tree, which allows React to compare it against future versions of the same tree, and generate partial HTML nodes to take to the browser. This concept is knwon in React as the virtual DOM.  
+
+## React DOM
+React.createElement h2 is going to give us a simple object. This object has many properties, but the most important properties are the type of the object, which is an h2, and teh props property, which has a children property, which has a children property that holds the text that we just rendered. So with React, we simply describe HTML elements as objects, and then React put them together into a tree. And it keeps a copy of this tree in memory, so wen things change, React will recalculate the three, and actually compare trees.
+
+## Rendering from server
+Our React application is rendering data from the server using JavaScript. But what happens if we don't have JavaScirpt?
+Ideally, we want this command to also render our application as seen by React so that we get the benefits of search engine optimization, and also we get a little bit of perfromance benefit. Instead of waiting fro React to warm up, render the component, ad then go back to teh servver to fetch the data, we can have an initial view ready by the server. So, to do that, we're going to have to modify this code, here, to pre-render all the React components on the server using the same data that we have in the API.

@@ -1,0 +1,14 @@
+{
+	"contests": [
+		{
+			"id": 1,
+			"categoryName": "Business/Company",
+			"contestName": "Cognitivee BUilding brianks"
+		},
+		{
+			"id": 2,
+			"categoryName": "Magazine/News",
+			"contestName": "Educating people"
+		}
+	]
+}
