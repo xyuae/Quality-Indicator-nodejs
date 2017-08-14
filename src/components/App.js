@@ -9,7 +9,7 @@ const pushState = (obj, url) =>
 class App extends React.Component {
 	state = {
 		pageHeader: 'Quality Indicator',
-		projects: this.props.initialContests
+		projects: this.props.initialProjects
 	}
 	componentDidMount() {
 
@@ -37,7 +37,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-	initialContests: PropTypes.array
+	initialProjects: PropTypes.array
 };
 
 export default App;

@@ -43,4 +43,13 @@ router.get('/projects/:projectId', (req, res) => {
 		.catch(console.error);
 });
 
+router.get('/contest/object', (req, res) => {
+	res.send({
+		projects: data.contests.reduce((obj, project) => {
+			obj[project.id] = project;
+			return obj;
+		}, {})
+	});
+});
+
 export default router;
