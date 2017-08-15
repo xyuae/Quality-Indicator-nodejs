@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 *.sock
-
+.public/bundle.js
 .sass-cache
 sass
 config.rb
