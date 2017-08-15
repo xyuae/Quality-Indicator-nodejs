@@ -11,10 +11,13 @@ const serverRender = () =>
 	axios.get('http://localhost:8080/api/contests')
 		.then(resp => {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 			return ReactDOMServer.renderToString(
 				<App initialContests={resp.data.contests} />
 			);
 =======
+=======
+>>>>>>> Stashed changes
 			console.log(resp.data.contests);
 			return {
 				initialMarkup: ReactDOMServer.renderToString(

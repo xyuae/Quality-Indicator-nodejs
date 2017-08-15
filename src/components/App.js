@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import ContestList from './ContestList';
-import * as api from '../api'
+import * as api from '../api';
 
 const pushState = (obj, url) =>
 	window.history.pushState(obj, '', url);

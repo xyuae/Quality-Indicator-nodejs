@@ -48,13 +48,4 @@ router.get('/projects/:projectId', (req, res) => {
 		.catch(console.error);
 });
 
-<<<<<<< Updated upstream
-=======
-router.get('/contest/object', (req, res) => {
-	res.send({
-		contests: contests
-	});
-});
-
->>>>>>> Stashed changes
 export default router;
