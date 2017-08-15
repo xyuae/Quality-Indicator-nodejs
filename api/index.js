@@ -4,17 +4,22 @@ import {MongoClient} from 'mongodb';
 import assert from 'assert';
 import config from '../config';
 
+// connect to mongo db
 let mdb;
 MongoClient.connect(config.mongodbUri, (err, db) => {
 	assert.equal(null, err);
-
 	mdb = db;
 });
 
 const router = express.Router();
 
+const contests =  data.contests.reduce((obj, project) => {
+	obj[project.id] = project;
+	return obj;
+}, {});
+
 router.get('/contests', (req, res) => {
-	res.send({ contests: data.contests });
+	res.send({ contests: contests });
 });
 
 router.get('/projects', (req, res) => {
@@ -43,4 +48,13 @@ router.get('/projects/:projectId', (req, res) => {
 		.catch(console.error);
 });
 
+<<<<<<< Updated upstream
+=======
+router.get('/contest/object', (req, res) => {
+	res.send({
+		contests: contests
+	});
+});
+
+>>>>>>> Stashed changes
 export default router;

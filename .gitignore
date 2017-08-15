@@ -2,6 +2,7 @@
 node_modules
 *.sock
 .public/bundle.js
+study
 .sass-cache
 sass
 config.rb
